@@ -51,11 +51,18 @@ Similarly, the dollar sign `$` shows the ending of the string and is to be found
 
 ### Character Classes
 
-```
-\w: text is word
+Character classes are what we call the square brackets that surround a string/ pattern of characters. The character class always matches at least one of the characters found inside the square brackets.
+For example in our code, there are 3 character class instances `([\da-z\.-]+)`, `([a-z\.]{2,6})`, `([\/\w \.-]*)`. For each of these character class contents at least one of its letters or numbers matches the original url string.
 
-\W: Capitalized means is not word
-```
+We could further break down the code inside the square brackets:
+
+- `[abc]` -> Matches any one of these characters a, b or c.
+- `[^abc]` -> Matches any other character apart from a, b or c.
+- `[a-z]` -> Matches any character from lowercase a to lowercase z.
+- `[A-Z]` -> Matches any character from uppercase A to uppercase Z.
+- `[a-Z]` -> Matches any character from lowercase a to uppercase Z.
+- `[0-9]` -> Matches any single digit from 0-9.
+- `[a-z 0-9]` -> Matches a single character from a-z or 0-9.
 
 ### The OR Operator
 
